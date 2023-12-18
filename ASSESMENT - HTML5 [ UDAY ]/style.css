@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  nav {
+    background-color: blue;
+    color: white;
+    height: 50px;
+  }
+  .main {
+    text-align: right;
+  }
+  .login-btn {
+    text-decoration: none;
+    color: black;
+    margin-right: 40px;
+    padding: 10px;
+    background-color: white;
+  }
+  .link-1 {
+    justify-content: end;
+    padding: 12px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s;
+    font-size: 800;
+    font-weight: bold;
+    margin-top: 2px;
+  }
+  .link-1:hover {
+    background-color: darkblue;
+    height: auto;
+  }
+
+  .div-1 {
+    height: auto;
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    background-color: blue;
+    width: 150px;
+    text-align: center;
+  }
+  .link-1:hover .div-1 {
+    display: block;
+  }
+  .link-2 {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+  .link-2:hover {
+    background-color: darkblue;
+  }
+  .div-2 {
+    display: none;
+    position: absolute;
+    top: 120px;
+    left: 150px;
+    background-color: blue;
+    width: 150px;
+  }
+  .link-2:hover .div-2 {
+    display: block;
+  }
+  .link-3 {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+  }
+  .link-3:hover {
+    background-color: darkblue;
+  }
+  i {
+    position: relative;
+    top: 0px;
+    left: 10px;
+  }
+  .icon {
+    position: absolute;
+    top: 25px;
+    left: 1250px;
+  }
+  .logo {
+    float: left;
+    position: absolute;
+    left: 40px;
+    
+  }
+  .dropdown-1 {
+    height: auto;
+    width: auto;
+    text-decoration: none;
+    color: white;
+  }
+  .dropdown-1:hover {
+    background-color: darkblue;
+  }
+  .dropdown-2 {
+    height: auto;
+    width: auto;
+    text-decoration: none;
+    color: white;
+  }
+  span{
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 60px;
+  }
