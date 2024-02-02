@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta tags for character set and viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the page -->
+    <title>JavaScript Assessment</title>
+    <!-- Linking to Google Fonts API for the Roboto font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    /* Resetting default margin and padding for all elements */
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Setting the font-family for the entire body */
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Styling for the main container */
+    .div-1 {
+        margin: 40px 0px 0px 500px;
+        height: auto;
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Styling for child elements within .div-1 */
+    .div-1>div,
+    select,
+    input,
+    label {
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+
+    /* Styling for the submit button */
+    button {
+        width: 18%;
+        height: 50px;
+        margin-left: 250px;
+        border-radius: 20px;
+        font-weight: bold;
+    }
+</style>
+
+<body>
+
+    <form action="">
+        <!-- Main container for the form -->
+        <div class="div-1">
+            <h1> Restaurant Booking</h1>
+            <!-- Dropdown for choosing the type of booking -->
+            <label for="booking">
+                <h4>Choice Of Booking</h4>
+            </label>
+            <select name="" id="booking" onchange="showoption()">
+                <option value="Choice">Choice</option>
+                <option value="Fullday">Fullday</option>
+                <option value="Halfday">Halfday</option>
+                <option value="Hourly">Hourly</option>
+            </select>
+
+            <!-- User details inputs -->
+            <label for="">User Name</label>
+            <input type="text">
+            <label for="">Email</label>
+            <input type="email">
+            <label for="">NO Of Person</label>
+            <input type="number" name="" id="">
+
+            <!-- Date input for specific booking types -->
+            <div id="date">
+                <label for="">Date</label>
+                <input type="date">
+            </div>
+
+            <!-- Time input for specific booking types -->
+            <div id="time">
+                <label for="">Time</label>
+                <input type="time">
+            </div>
+
+            <!-- Slot selection for specific booking types -->
+            <div id="slot">
+                <label for="">Slots</label>
+                <input type="radio" value="Breakfast">Breakfast
+                <input type="radio" value="Lunch">Lunch
+                <input type="radio" value="Dinner">Dinner
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <!-- JavaScript function to handle the visibility of form elements based on the booking type -->
+    <script>
+        function showoption() {
+            let booking = document.getElementById("booking");
+            let date = document.getElementById("date");
+            let time = document.getElementById("time");
+            let slot = document.getElementById("slot");
+
+            if (booking.value === "Fullday") {
+                date.style.display = "block";
+                time.style.display = "none";
+                slot.style.display = "none";
+            } else if (booking.value === "Halfday") {
+                date.style.display = "block";
+                time.style.display = "none";
+                slot.style.display = "block";
+            } else if (booking.value === "Hourly") {
+                date.style.display = "block";
+                time.style.display = "block";
+                slot.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
