@@ -92,9 +92,7 @@ ORDER BY year DESC, winner ASC;
 SELECT year, subject, winner, country, category 
 FROM Nobel_win 
 WHERE year = 1970 
-ORDER BY CASE 
-    WHEN subject IN ('Chemistry', 'Economics') THEN 2 
-    ELSE 1 
-END, 
-subject ASC, 
-winner ASC;
+ORDER BY 
+    FIELD(subject, 'Chemistry', 'Economics') DESC, 
+    subject ASC, 
+    winner ASC;
